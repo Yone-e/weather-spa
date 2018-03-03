@@ -1,0 +1,27 @@
+<h1>WEATHER FORECAST</h1>
+<!-- current location weather -->
+<div class="location-container">
+  <h2 class="location-container__title">Your location:</h2>
+  <div>
+    <city-weather *ngIf="!!current" [city]=current></city-weather>
+    <div *ngIf="!current">
+    </div>
+  </div>
+</div>
+<!-- cities lists -->
+<div>
+  <h2 class="location-container__title location-container__other">Other cities:</h2>
+  <form class="search-form" #adding="ngForm">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Type city here..." aria-label="Recipient's username" aria-describedby="basic-addon2"
+        name="new" ngModel required #new="ngModel">
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-outline-secondary" type="button" (click)="weather.addCity(adding.value.new); adding.reset()">ADD</button>
+      </div>
+    </div>
+  </form>
+  <div *ngFor="let city of weather.cities">
+    <city-weather [city]=city [removable]=true>
+    </city-weather>
+  </div>
+</div>

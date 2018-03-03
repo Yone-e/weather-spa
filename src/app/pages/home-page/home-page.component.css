@@ -1,0 +1,28 @@
+h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.location-container__title {
+	font-size: 3rem;
+	font-weight: 300;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #333;
+}
+.location-container__other {
+	margin-top: 100px;
+}
+.search-form {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.search-form__input {
+	width: 85%;
+}
+.search-form__button {
+	width: 10%;
+}
