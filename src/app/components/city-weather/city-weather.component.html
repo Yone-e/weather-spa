@@ -1,0 +1,73 @@
+<div class="city-container" [hidden]="!loaded">
+  <div class="d-flex justify-content-between">
+    <h3>{{forecast.city}}</h3>
+    <button class="btn btn-outline-secondary" (click)="weather.removeCity(city.name)" *ngIf="!!removable">
+      Remove
+    </button>
+  </div>
+  <div class="row days-container">
+    <div class="col-lg days-container__day">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <p class="day__date bold">
+            Now</p>
+        </li>
+        <li class="list-group-item">
+          <p class="days-container__text-container">
+            <span class="bold">
+              <i class="fas fa-thermometer-empty"></i> TEMP:</span>
+            <span>{{now.temp}}&#176;F</span>
+          </p>
+          <p>
+        </li>
+        <li class="list-group-item">
+          <p class="days-container__text-container">
+            <span class="bold">
+              <i class="fas fa-flag"></i> WIND:</span>
+            <span>{{now.speed}}m/s {{now.degree}}</span>
+          </p>
+          <p>
+        </li>
+        <li class="list-group-item">
+          <p class="days-container__text-container">
+            <span class="bold">
+              <i class="fas fa-sun"></i> WEATHER:</span>
+            <span>{{now.description}}</span>
+          </p>
+          <p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row days-container">
+    <div class="col-lg days-container__day" *ngFor="let day of forecast.days">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <p class="day__date bold">
+            {{day.date}}</p>
+        </li>
+        <li class="list-group-item">
+          <p class="days-container__text-container">
+            <span class="bold">
+              <i class="fas fa-thermometer-empty"></i> TEMP:</span>
+            <span>{{day.temp}}&#176;F</span>
+          </p>
+        </li>
+        <li class="list-group-item">
+          <p class="days-container__text-container">
+            <span class="bold">
+              <i class="fas fa-flag"></i> WIND:</span>
+            <span>{{day.speed}}m/s {{day.degree}}</span>
+          </p>
+        </li>
+        <li class="list-group-item">
+          <p class="days-container__text-container">
+            <span class="bold">
+              <i class="fas fa-sun"></i> WEATHER:</span>
+            <span>{{day.description}}</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

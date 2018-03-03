@@ -6,6 +6,7 @@
 /out-tsc
 
 # dependencies
+packege-lock.json
 /node_modules
 
 # IDEs and editors

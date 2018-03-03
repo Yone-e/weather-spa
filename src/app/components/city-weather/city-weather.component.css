@@ -1,0 +1,40 @@
+.city-container {
+	margin-bottom: 50px;
+}
+.days-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.days-container p {
+	margin: 0;
+}
+.days-container__day {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #444;
+	border-radius: 5px;
+	background-color: #fff;
+	transition: .5s;
+}
+.days-container__day:hover {
+	box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.75)
+}
+.day__date {
+	text-align: center;
+	font-size: 20px;
+}
+.days-container__day p:last-child {
+	margin: 0;
+}
+.list-group-item {
+	padding: 5px 0;
+	background-color: transparent;
+}
+.days-container__text-container {
+	display: flex;
+	justify-content: space-between;
+}
+.days-container__text-container .bold {
+	margin-right: 10px;
+}
